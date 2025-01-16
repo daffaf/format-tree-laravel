@@ -1,0 +1,54 @@
+
+body{
+   font-family: sans-serif;
+}
+
+.treeview{
+   cursor: pointer;
+}
+.treeview-title{
+   display: flex;
+   flex-direction: row;
+   gap: 5px;
+}
+.treeview-content{
+   display: none;
+   max-height: 0;
+   padding-left: 14px;
+}
+.treeview-content.open{
+   display: block;
+   max-height: fit-content;
+   margin-bottom: 0px;
+}
+.sub-category{
+   max-height: 0;
+   display: none;
+   overflow: hidden;
+   transition: max-height 0.5s ease;
+}
+.sub-category.open {
+   display: block;
+   max-height: fit-content;
+   margin-bottom: 0px;
+}
+.arrow {
+   transition: transform 0.2s ease;
+   gap:5px; 
+   align-items: center;
+   display: inline-block;
+}
+.arrow-title {
+   transition: transform 0.2s ease;
+   gap:5px; 
+   font-size: large;
+   align-items: center;
+   display: inline-block;
+}
+.treeview{
+   overflow-y: auto;
+}
+
+.arrow.rotated {
+   transform: rotate(90deg);
+}
